@@ -4,20 +4,29 @@
 <title>How to Earn from Adobe Stock</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    div > h2 {
+ h2 {
     background: #111;
-    padding: 20px;
+    padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px #00FFCC;
-    display: inline-block;
-    width: 100%;
+    display: block;
     transition: 0.3s;
 }
 
-div > h2:hover {
-    transform: scale(1.02);
+h2:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #00FFCC;
 }
+
+p {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #222;
+}
+    
     body {
     background: linear-gradient(135deg, #000000, #0f2027);
 }
@@ -33,7 +42,38 @@ img {
     margin-top: 10px;
     box-shadow: 0 0 15px #00FFCC;
 }
+section {
+    background: #111;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00FFCC;
+    transition: 0.3s;
+}
 
+section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #00FFCC;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.fade {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 p {
     line-height: 1.6;
     font-size: 16px;
