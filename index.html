@@ -5,7 +5,45 @@
 <title>Zakir Website</title>
 
 <style>
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
 
+.menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.side-menu a {
+  display: block;
+  color: white;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  margin: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px yellow;
+}
 body {
     background-color: black;
     color: white;
@@ -71,7 +109,18 @@ button:hover {
 </head>
 
 <body>
+<div class="navbar">
+    <div class="hero">
+  <h2>Zakir</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</div>
 
+<div id="menu" class="side-menu">
+  <a href="index.html">Home</a>
+  <a href="fiver.html">Fiverr</a>
+  <a href="post1.html">Adobe</a>
+  <a href="contact.html">Contact</a>
+</div>
 <h1>Hi, I'm Zakir 👋</h1>
 
 <h2>Digital Creator & Adobe Stock Contributor</h2>
@@ -96,6 +145,16 @@ Fiverr Services 💼
 </button>
     <a href="about.html">
 <button>About Me 👤</button>
+        <script>
+function toggleMenu() {
+  let menu = document.getElementById("menu");
+  if (menu.style.left === "0px") {
+    menu.style.left = "-250px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+</script>
 </a>
     <button onclick="window.location.href='privacy.html'">
 Privacy Policy 🔒
