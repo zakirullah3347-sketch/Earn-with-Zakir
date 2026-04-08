@@ -15,46 +15,107 @@
 
 /* BODY */
 body {
-  background: black;
+  background: linear-gradient(to bottom, #000, #111);
   color: white;
   font-family: Arial;
-  text-align: center;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #111;
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 0;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #222;
 }
 
 /* HERO */
 .hero {
-  margin-top: 40px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
+/* IMAGE */
 .hero img {
-  width: 150px;
+  width: 140px;
   border-radius: 50%;
-  box-shadow: 0 0 20px yellow;
-  margin: 20px 0;
+  box-shadow: 0 0 25px yellow;
+  margin: 15px 0;
 }
 
+/* TEXT */
 h1 {
   color: yellow;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 p {
-  color: #ccc;
-  margin: 10px 20px;
+  color: #aaa;
+  font-size: 14px;
+  max-width: 500px;
+  margin-bottom: 10px;
 }
 
 /* BUTTONS */
 .buttons {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 button {
   background: yellow;
   color: black;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 10px 18px;
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
@@ -63,63 +124,68 @@ button:hover {
   box-shadow: 0 0 15px yellow;
 }
 
-/* BENEFITS */
-.benefits {
-  background: #111;
-  margin: 30px;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.item {
-  padding: 10px;
-  border-bottom: 1px solid #333;
-}
-
-/* FOOTER */
-.footer {
-  margin-top: 30px;
-  padding: 20px;
-  background: #000;
-  color: #888;
+/* DESKTOP FIX */
+@media (min-width: 768px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 22px; }
+  p { font-size: 16px; }
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="fiver.html">Fiverr</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Zakir</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- HERO -->
 <div class="hero">
+
   <h1>Hi, I'm Zakir 👋</h1>
   <h2>Digital Creator & Adobe Stock Contributor</h2>
 
   <img src="myphoto.jpg">
 
-  <p>I create stock images and design digital content</p>
-  <p>Welcome to my website. Learn online earning with me.</p>
+  <p>Helping people learn online earning 🚀</p>
 
   <div class="buttons">
+
+    <a href="https://stock.adobe.com" target="_blank">
+      <button>Adobe Portfolio</button>
+    </a>
+
     <button onclick="window.location.href='fiver.html'">Fiverr</button>
     <button onclick="window.location.href='about.html'">About</button>
     <button onclick="window.location.href='privacy.html'">Privacy</button>
     <button onclick="window.location.href='contact.html'">Contact</button>
+
   </div>
-</div>
-
-<div class="benefits">
-  <h2>Benefits</h2>
-
-  <div class="item">Learn Fiverr earning</div>
-  <div class="item">Adobe Stock guide</div>
-  <div class="item">Digital skills</div>
-  <div class="item">Online income tips</div>
 
 </div>
 
-<div class="footer">
-  <p>© Zakir Website</p>
-</div>
+<!-- SCRIPT -->
+<script>
+function toggleMenu() {
+  let menu = document.getElementById("menu");
+  if (menu.style.left === "0px") {
+    menu.style.left = "-260px";
+  } else {
+    menu.style.left = "0px";
+  }
+}
+</script>
 
 </body>
 </html>
