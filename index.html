@@ -1,10 +1,18 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Zakir Website</title>
 
 <style>
+
+/* BODY */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial;
+}
+
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -33,119 +41,111 @@
 .side-menu a {
   display: block;
   color: white;
-  padding: 10px 0;
+  padding: 12px 0;
   text-decoration: none;
 }
 
 /* HERO */
 .hero {
-  margin: 30px;
+  text-align: center;
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px yellow;
-}
-body {
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-family: Arial;
-}
-    .buttons {
-display: flex;
-justify-content: center;
-gap: 15px;
-margin-top: 20px;
 }
 
 /* IMAGE */
 img {
-    border-radius: 50%;
-    box-shadow: 0 0 20px yellow;
-    margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px yellow;
+  margin-top: 20px;
 }
 
 /* TEXT */
 h1 {
-    color: yellow;
+  color: yellow;
 }
 
 h2 {
-    color: #ddd;
+  color: #ddd;
 }
 
 p {
-    color: #bbb;
-    font-size: 18px;
+  color: #bbb;
+  max-width: 600px;
+  margin: auto;
 }
 
-/* BUTTON */
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 button {
-    background-color: yellow;
-    color: black;
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.3s;
+  background: yellow;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: black;
-    color: yellow;
-    box-shadow: 0 0 25px yellow;
-}
-
-/* BUTTONS CENTER */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+  background: black;
+  color: yellow;
+  box-shadow: 0 0 10px yellow;
 }
 
 </style>
+
 </head>
 
 <body>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="fiver.html">Fiverr</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- NAVBAR -->
 <div class="navbar">
-    <div class="hero">
   <h2>Zakir</h2>
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
 </div>
 
-<div id="menu" class="side-menu">
-  <a href="index.html">Home</a>
-  <a href="fiver.html">Fiverr</a>
-  <a href="post1.html">Adobe</a>
-  <a href="contact.html">Contact</a>
+<!-- HERO SECTION -->
+<div class="hero">
+
+  <h1>Hi, I'm Zakir 👋</h1>
+  <h2>Digital Creator & Adobe Stock Contributor</h2>
+
+  <img src="myphoto.jpg">
+
+  <p>I create stock images and design digital content</p>
+  <p>Welcome to my website. Here I share my work and help people learn online earning.</p>
+
+  <div class="buttons">
+
+    <a href="https://stock.adobe.com" target="_blank">
+      <button>Adobe Portfolio</button>
+    </a>
+
+    <button onclick="window.location.href='fiver.html'">Fiverr</button>
+    <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='privacy.html'">Privacy</button>
+    <button onclick="window.location.href='contact.html'">Contact</button>
+
+  </div>
+
 </div>
-<h1>Hi, I'm Zakir 👋</h1>
 
-<h2>Digital Creator & Adobe Stock Contributor</h2>
-
-<img src="myphoto.jpg" width="200">
-
-<p>I create stock images and design digital content</p>
-<p>Welcome to my website. Here I share my work and help people learn online earning methods like Adobe Stock and Fiverr.</p>
-    <p>Click below to explore my work and start your earning journey 👇</p>
-    <p>This website provides genuine information about online earning and digital skills.</p>
-<h2>Adobe Stock 📸</h2>
-
-<div class="buttons">
-
-<a href="https://stock.adobe.com/contributor/212905786/Zakir" target="_blank">
-    <button>View My Adobe Portfolio 📸</button>
-</a>
-
-
-<button onclick="window.location.href='fiver.html'">
-Fiverr Services 💼
-</button>
-    <a href="about.html">
-<button>About Me 👤</button>
-        <script>
+<!-- SCRIPT -->
+<script>
 function toggleMenu() {
   let menu = document.getElementById("menu");
   if (menu.style.left === "0px") {
@@ -155,16 +155,6 @@ function toggleMenu() {
   }
 }
 </script>
-</a>
-    <button onclick="window.location.href='privacy.html'">
-Privacy Policy 🔒
-</button>
-<button onclick="window.location.href='contact.html'">Contact 📞</button>
 
-
-
-<button onclick="window.location.href='post1.html'">Adobe Stock Guide 📸</button>
-
-<button onclick="window.location.href='post2.html'">Fiverr Earning Guide 💰</button>
 </body>
 </html>
